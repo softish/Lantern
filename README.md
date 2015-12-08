@@ -1,2 +1,3 @@
 # Lantern
-Windows Phone 8.1 Flashlight
+A Flashlight app for Windows Phone 8.1
+
