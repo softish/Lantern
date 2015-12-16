@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button x:Name="light" Content="Light" HorizontalAlignment="Left" Margin="36,27,0,0" VerticalAlignment="Top" Click="light_Click"/>
 
     </Grid>
 </Page>

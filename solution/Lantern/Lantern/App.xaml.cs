@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Capture;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,7 @@ namespace Lantern
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
+        private Windows.Media.Capture.MediaCapture captureManager;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -102,6 +104,12 @@ namespace Lantern
 
             // Ensure the current window is active
             Window.Current.Activate();
+        }
+
+        async private void initCamera_Click(object sender, RoutedEventArgs e)
+        {
+            captureManager = new MediaCapture();
+            await captureManager.InitializeAsync();
         }
 
         /// <summary>
