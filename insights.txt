@@ -1,0 +1,5 @@
+
+Action event is referenced form xaml element through Click"name_of_method"
+Method stub can be generated from the properties window, using the ligtning button(just no)
+
+ 
