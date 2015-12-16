@@ -1,5 +1,14 @@
 
+// Regarding action events and buttons
+Regarding MainPage.xaml and MainPage.xaml.cs
 Action event is referenced form xaml element through Click"name_of_method"
 Method stub can be generated from the properties window, using the ligtning button(just no)
 
+// Regarding MediaCapture.InitializeAsync() called form MainPage.xaml.cs 
+To access the LED the Windows.Media.Capture.MediaCapture.(VideoDeviceController.TorchControl) is used.
+The MediaCapture object shouldn't be initialized from the MTA thread, because of risk of 
+undefined behaviour(experienced that). It should be done in the STA thread or the main UI thread.
+ 
+The Dispatch class isn't referencabel form MainPage.xaml.cs. Posts suggesting it dates from 2013.
+ 
  
